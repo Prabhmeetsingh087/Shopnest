@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 import * as actionTypes from '../constants/productsConstants';
-const URL = 'http://localhost:8000';
+const URL = 'http://ec2-13-48-46-186.eu-north-1.compute.amazonaws.com';
 
 
 
@@ -25,9 +25,6 @@ export const getproducts = ()=> async (dispatch)=>{
      payload: errorMessage
     
    })
-
-
-
 
 }
 };

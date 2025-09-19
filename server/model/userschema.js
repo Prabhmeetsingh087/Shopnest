@@ -5,7 +5,7 @@ const Userschema = new mongoose.Schema({
   firstname:{
 
     type: String,
-    // required: true,
+    required: true,
     trim: true,
     min:5,
     max:20
@@ -14,7 +14,7 @@ const Userschema = new mongoose.Schema({
   lastname:{
 
     type: String,
-    // required: true,
+    required: true,
     trim: true,
     min:5,
     max:20
@@ -23,7 +23,7 @@ const Userschema = new mongoose.Schema({
   username:{
 
     type: String,
-    // required: true,
+    required: true,
     trim: true,
     unique:true,
     index: true,
@@ -33,7 +33,7 @@ const Userschema = new mongoose.Schema({
   email:{
 
     type: String,
-    // required: true,
+    required: true,
     trim: true,
     unique:true,
 
@@ -42,7 +42,7 @@ const Userschema = new mongoose.Schema({
   password:{
 
     type: String,
-    // required: true
+    required: true
 
   },
   phone:{
@@ -58,5 +58,8 @@ const Userschema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', Userschema);
+
+//The mongoose.model('User', UserSchema); call returns the User model class,
+// which you can use to interact with the users collection in MongoDB.
 
 export default User;

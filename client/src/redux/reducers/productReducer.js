@@ -52,7 +52,7 @@ export const getProductDetailReducer = (state = {product: {}}, action) => {
     case actionTypes.GET_PRODUCT_DETAILS_REQUEST:
       return {
         loading:true,
-        error: null, // Clear error on success
+        error: null, 
       };
 
     case actionTypes.GET_PRODUCT_DETAILS_SUCCESS:
